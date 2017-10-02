@@ -1,0 +1,152 @@
+1: Undeclared Variables:
+
+int main()
+{
+
+//Fix 1: Declared variable 'x'
+
+int x;
+cin>>x;
+cout<<x;
+}
+
+"Huh? Why do I get an error?"
+ 
+
+2: Uninitialized variables:
+
+//Fix 2: Initializing 'count' from 0 and incrementing in loop
+
+int count =0;
+while(count<100)
+{
+cout<<count;
+
+count++;
+}
+
+"Why doesn't my program enter the while loop?"
+
+
+
+
+3: Setting a variable to an uninitialized value:
+
+//Fix 3: Placing 'int sum=a+b' after inputs
+
+int a, b;
+cout<<"Enter two numbers to add: ";
+cin>>a>>b;
+int sum=a+b;
+cout<<"The sum is: "<<sum;
+When Run:
+Enter two numbers to add: 1 3
+The sum is: -1393
+
+"What's wrong with my program?"
+
+//Fix 4: Adding an equal sign x='Y' with x=='Y'
+
+4: Using a single equal sign to check equality:
+
+char x='Y';
+while(x=='Y')
+{
+//...
+cout<<"Continue? (Y/N)";
+cin>>x;
+}
+
+"Why doesn't my loop ever end?"
+ 
+
+//Fix 5: Function definition for menu() function
+
+5: Undeclared Functions:
+
+void menu();
+int main()
+{
+menu();
+}
+void menu()
+{
+//...
+}
+
+"Why do I get an error about menu being unknown?"
+
+
+
+//Fix 6: Removed extra semicoln at the end of for loop
+
+6: Extra Semicolons:
+
+for(int x=0; x<100; x++)
+cout<<x;
+
+"Why does it output 100?"
+
+
+//Fix 7: fixed condition for overstepping array loop
+
+7: Overstepping array boundaries:
+
+int array[10];
+//...
+for(int x=1; x<10; x++)
+cout<<array[x];
+
+"Why doesn't it output the correct values?"
+
+
+//Fix 8: Casted numerator to double
+
+8: Integer division
+
+For example:
+double half = (double)>1/2;
+
+This code sets half to 0 not 0.5! Why? Because 1 and 2 are integer constants.
+
+//Fix 9: Correcting variable names
+
+9: Variable Name Styles
+
+Take a look at the below program. Can you see anything wrong?
+
+#include <stdio.h>
+#include <string.h>
+
+main()
+{
+char catName[20] = "fluffy";
+char dogName[20] = "fido";
+char ratName[20] = "fester";
+int catAge = 3;
+int dogAge = 4;
+int ratAge = 1;
+char myPet[20];
+int myPetAge;
+
+strcpy(myPet,ratName);
+myPetAge = ratAge;
+printf("My pet is %s\n",myPet);
+}
+
+Besides the obviously bizarre choice of having a pet rat, do you notice anything? 
+
+
+
+//Fix 10: Replaced "OR" || with "AND" && operator 
+
+10 Misusing the && and || operators:
+
+int value;
+do
+{
+//...
+value=10;
+}while(!(value==10) && !(value==20))
+
+"Huh? Even though value is 10 the program loops. Why?"
