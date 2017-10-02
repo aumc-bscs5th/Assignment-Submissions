@@ -86,14 +86,18 @@ cout<<x;
 "Why does it output 100?"
 // ANSERS-6: It prints the number from 0 to 99 which are 100 outputs.
 7: Overstepping array boundaries:
-
+#include <iostream>
+using namespace std;
+int main()
+{
 int array[10];
 //...
-for(int x=1; x<=10; x++)
+for(int x=0; x<10; x++)
 cout<<array[x];
-
+}
 "Why doesn't it output the correct values?"
-
+// ANSWER-7: Because the last index of array is equal to size-1 i.e 10-1 = 9.
+// You have 10 index as the last index of array which is overstepping array boundaries.
 
 8: Integer division
 
