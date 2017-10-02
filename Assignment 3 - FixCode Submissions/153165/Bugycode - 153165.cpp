@@ -1,5 +1,4 @@
 // Read code below and try to identify any bug and then fix it. 
-// Name: AHSAN JAVED (153196)
 
 
 int main()
