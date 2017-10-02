@@ -12,15 +12,20 @@ cout<<x;
  // ANSWER-1: Because variable 'x' was not declared. 
 
 2: Uninitialized variables:
-
-int count;
+#include<iostream>
+using namespace std;
+int main()
+{
+int count=0; // count variable was not initialized 
 while(count<100)
 {
 cout<<count;
+count++;     // in order to terminate this loop, you need to increment the value of count variable 
 }
-
+}
 "Why doesn't my program enter the while loop?"
-
+// ANSWER-2: Because count varaible was not initialized. 
+// And in order to terminate this program from infinite loop, count must be incremented inside the while loop.  
 
 3: Setting a variable to an uninitialized value:
 
