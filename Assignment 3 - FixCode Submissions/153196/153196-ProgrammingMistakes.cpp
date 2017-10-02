@@ -134,10 +134,11 @@ int itsAge;
 strcpy(myPet,rat_Name);
 itsAge = ratage;
 printf("My pet is %s\n",myPet);
+printf("Its age is %d\n",itsAge);
 }
 
 Besides the obviously bizarre choice of having a pet rat, do you notice anything? 
-
+// ANSWER-9: It does not print its age.
 
 10 Misusing the && and || operators:
 
