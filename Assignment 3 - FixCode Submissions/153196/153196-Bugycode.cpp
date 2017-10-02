@@ -1,7 +1,9 @@
 // Read code below and try to identify any bug and then fix it. 
 // Name: AHSAN JAVED (153196)
 
-
+// Fix#1 Added iostream library and standard namespace
+#include <iostream>
+using namespace std;
 int main()
 {
 	cout << "This program will crash"
