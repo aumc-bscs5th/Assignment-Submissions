@@ -141,13 +141,18 @@ Besides the obviously bizarre choice of having a pet rat, do you notice anything
 // ANSWER-9: It does not print its age.
 
 10 Misusing the && and || operators:
-
+#include <iostream>
+using namespace std;
+int main()
+{
 int value;
 do
 {
 //...
 value=10;
-}while(!(value==10) || !(value==20))
-
+}while(!(value==10) && !(value==20)); // Semicolon was missing
+}
 "Huh? Even though value is 10 the program loops. Why?"
-
+// ANSWER-10: Because you have used wrong logical operator which turns the program into infinite loop. In otherword, there is a logical error.
+// && can be used to resolve this logical error.
+ 
