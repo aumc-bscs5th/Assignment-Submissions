@@ -1,0 +1,54 @@
+
+    //Roll No 153182
+
+
+#include <iostream>
+                                                    //(bug fixed)
+using namespace std;
+
+// Read code below and try to identify any bug and then fix it.
+
+
+ int main()
+ {
+ 	cout << "This program will not crash now"
+ 		 << endl;
+
+
+ 	float nSum=0;            //Initialize nsum to 0..(bug fixed)
+ 	int nNums;
+
+
+ 	// accumulate input numbers until the
+ 	// user enteres a negative number, then
+ 	// return the average
+ 	nNums = 0;
+ 	int nValue;         //Declares nValue outside the loop..(bug fixed)
+ 	while(true)
+ 	{
+
+ 		cout << "Enter another number:";
+ 		cin >> nValue;
+ 		cout << endl;
+
+
+ 		// if the input number is negative...
+ 		if(nValue < 0)
+ 		{
+ 			// ... then output the average
+ 			cout << "Average is: "
+ 				 << nSum/nNums
+ 				 << endl;
+ 			break;
+ 		}
+
+
+
+ 		nSum += nValue;
+ 		nNums++;           //added nNums++..(bug fixed)
+ 	}
+
+
+ 	cin.ignore(10000, '\n');
+ 	return 0;
+ }
