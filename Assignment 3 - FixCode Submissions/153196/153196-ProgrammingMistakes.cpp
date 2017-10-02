@@ -1,13 +1,15 @@
  1: Undeclared Variables:
-
+#include<iostream>
+using namespace std;
 int main()
 {
+int x; // Fix#1 Variable 'x' was not declared 
 cin>>x;
 cout<<x;
 }
 
 "Huh? Why do I get an error?"
- 
+ // ANSWER-1: Because variable 'x' was not declared. 
 
 2: Uninitialized variables:
 
