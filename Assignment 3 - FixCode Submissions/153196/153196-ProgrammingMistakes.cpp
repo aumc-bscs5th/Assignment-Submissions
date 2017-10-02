@@ -28,18 +28,24 @@ count++;     // in order to terminate this loop, you need to increment the value
 // And in order to terminate this program from infinite loop, count must be incremented inside the while loop.  
 
 3: Setting a variable to an uninitialized value:
-
+#include<iostream>
+using namespace std;
+int main()
+{
 int a, b;
-int sum=a+b;
+int sum; // You cannot initialize sum variable to the value of uninitialized variables (a and b) 
 cout<<"Enter two numbers to add: ";
-cin>>b;
+cin>>a>>b; // Input to a variable was missing
+sum=a+b;   // Now add a and b to sum variable
 cout<<"The sum is: "<<sum;
+}
 When Run:
 Enter two numbers to add: 1 3
 The sum is: -1393
 
 "What's wrong with my program?"
-
+// ANSWER-3: Because you cannot initialize sum variable to the value of uninitialized variables (a and b).
+// And input to a variable was missing.
 4: Using a single equal sign to check equality:
 
 char x='Y';
