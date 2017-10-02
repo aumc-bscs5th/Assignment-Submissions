@@ -1,6 +1,8 @@
 // Read code below and try to identify any bug and then fix it. 
 
-
+// 1. iostream library and standard namespace was missing
+#include <iostream>
+using namespace std;
 int main()
 {
 	cout << "This program will crash"
