@@ -1,4 +1,4 @@
-//Fix 1 : Added Preprocessor Directories (library and header file
+//Fix 1 : Added Preprocessor Directories (library and header file)
 
 #include<iostream>
 using namespace std;
