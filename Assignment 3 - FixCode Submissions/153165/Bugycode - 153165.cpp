@@ -35,8 +35,9 @@ int main()
 		if(nValue < 0)
 		{
 			// ... then output the average
+			// Type casing
 			cout << "Average is: "
-				 << nSum/nNums
+				 << static_cast<float>(nSum)/nNums
 				 << endl;
 			break;
 		}
