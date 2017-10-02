@@ -76,12 +76,15 @@ void menu()
 "Why do I get an error about menu being unknown?"
 // ANSWER-5: Because prototype must be decleared if you called a function before its function defination
 6: Extra Semicolons:
-
-for(int x=0; x<100; x++);
+#include <iostream>
+using namespace std;
+int main()
+{
+for(int x=0; x<100; x++) // Extra semicolon is removed
 cout<<x;
-
+}
 "Why does it output 100?"
-
+// ANSERS-6: It prints the number from 0 to 99 which are 100 outputs.
 7: Overstepping array boundaries:
 
 int array[10];
