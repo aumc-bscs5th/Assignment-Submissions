@@ -37,6 +37,8 @@ int main()
 		// not negative, add the value to
 		// the accumulator
 		nSum += nValue;
+		// Fix#2 Increment nNums by 1 for the accumulator 
+		nNums++;
 	}
 
 	cin.ignore(10000, '\n');
