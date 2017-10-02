@@ -1,0 +1,66 @@
+// Read code below and try to identify any bug and then fix it.
+// Solution by: Muhammad Usman, Roll Number 153176
+
+// =>FIX1: Included Header File 'iostream'
+// =>FIX2: Added 'using namespace std' standard library for 'cin' & 'cout'
+#include<iostream>
+using namespace std;
+
+int main()
+{
+
+	cout << "This program will NOT crash now! (After Bugs Fixation)"
+		 << endl;
+
+// =>FIX3: Changed the data type from 'int' to float & initialized with 0.0
+	float nSum = 0.0;
+	float nNums;
+
+	// accumulate input numbers until the
+	// user enteres a negative number, then
+	// return the average
+	nNums = 0.0;
+
+// =>FIX4: Changed the data type from 'int' to 'float' & Declared 'nValue' outside the 'while loop' to avoid repeated declaration
+	float nValue = 0.0;
+
+	while(true)
+	{
+		// enter another number to add
+
+        Label:
+            cout << "Enter another number:";
+            cin >> nValue;
+            cout << endl;
+
+// =>FIX5: Avoid to get 'Character. input
+            while(cin.fail()||cin.get() != '\n')
+                {
+                    cin.clear();
+                    cin.clear();
+                    cin.ignore(256,'\n');
+                    cout<< "INVALID INPUT\n" ;
+                    goto Label;
+                }
+
+		// if the input number is negative...
+		if(nValue < 0)
+		{
+			// ... then output the average
+			cout << "Average is: "
+				 << nSum/nNums
+				 << endl;
+			break;
+		}
+
+		// not negative, add the value to
+		// the accumulator
+		nSum += nValue;
+
+// =>FIX6: Added 'nNums++' as an increment
+        nNums++;
+	}
+
+	cin.ignore(10000, '\n');
+	return 0;
+}
