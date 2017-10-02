@@ -102,9 +102,15 @@ cout<<array[x];
 8: Integer division
 
 For example:
-double half = 1/2;
-
-This code sets half to 0 not 0.5! Why? Because 1 and 2 are integer constants.
+#include <iostream>
+using namespace std;
+int main()
+{
+double half = 1.0/2.0;
+cout<<half;
+}
+This code sets half to 0 not 0.5! Why? 
+// ANSWER-8: Because 1 and 2 are integer constants.
 
 
 9: Variable Name Styles
