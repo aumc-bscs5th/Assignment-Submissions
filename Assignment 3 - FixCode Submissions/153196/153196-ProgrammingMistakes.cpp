@@ -63,7 +63,7 @@ cin>>x;
 // ANSWER-4: Beacuse you have used worng operator '=' for equality in the condition statement. 
 
 5: Undeclared Functions:
-
+void menu(); // Prototype must be decleared if you called a function before its function defination
 int main()
 {
 menu();
@@ -74,7 +74,7 @@ void menu()
 }
 
 "Why do I get an error about menu being unknown?"
-
+// ANSWER-5: Because prototype must be decleared if you called a function before its function defination
 6: Extra Semicolons:
 
 for(int x=0; x<100; x++);
