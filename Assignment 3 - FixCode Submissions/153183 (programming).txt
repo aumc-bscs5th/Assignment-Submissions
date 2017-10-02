@@ -1,0 +1,237 @@
+//muhammad gulfam(153183)
+//header file
+
+#include<iostream>
+using namespace std;
+
+//main function
+int main()
+{
+	//Declare Int Variable
+ 	int a;
+ 
+ 	//prompt
+ 	cout<<"Ente the integer for the program to Print: "<<endl;
+ 	
+ 	//taking input 
+	cin>>x;
+	
+	//printing assigned number
+	cout<<a;
+	return 0;
+}
+
+//"Huh? Why do I get an error?"
+//Ans: You need to assign a value type to x before using it 
+
+//-----------------------------------------------------------------------------------------
+
+//2: Uninitialized variables:
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	//decalaring and initiating variable
+	int count=5;
+	
+	//loop
+	while(count<100)
+	{
+		//incrementing 
+		count++;
+		
+		//printing 
+		cout<<count<<endl;
+	}
+	return 0;
+}
+
+//"Why doesn't my program enter the while loop?"
+//Ans: Count needs to be initialized with a value to be compared in the while loop
+
+//-----------------------------------------------------------------------------------------
+
+//3: Setting a variable to an uninitialized value:
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	//initializing a and b
+	int a, b=0;
+	
+	int sum;
+	
+	//taking input in a
+	cout<<"Enter two numbers to add: ";
+	cin>>a;
+	cin>>b;
+	
+	//initializing sum after taking input in a and b
+	sum=a+b;
+	cout<<"The sum is: "<<sum;
+
+}
+//"What's wrong with my program?"
+//Ans:Since a was not being given any value and b was being given value with a space in it, this caused the error
+
+//-----------------------------------------------------------------------------------------
+
+
+//4: Using a single equal sign to check equality:
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	//adding header files and used double equal sign 
+	char a='Y';
+	while(a=='Y')
+	{
+		//...
+	cout<<"Continue? (Y/N)";
+	cin>>a;
+	}
+}
+
+//"Why doesn't my loop ever end?"
+
+//Ans: 
+//   In the default code the single = operator was assingning the value of Y to the variable a,
+//   use == operator for comparison = operator is for assigning
+
+
+//-----------------------------------------------------------------------------------------
+
+
+//5: Undeclared Functions:
+
+#include<iostream>
+using namespace std;
+
+// function decalartion
+void menu();
+//main Function
+int main()
+{
+	//adding header files and function decalaration
+	menu();
+	return 0;
+}
+void menu()
+{
+cout<<"Helloworld";
+}
+
+//"Why do I get an error about menu being unknown?"
+//Ans: The function was supposed to be declared before it could be caled.
+
+//-----------------------------------------------------------------------------------------
+
+
+
+//6: Extra Semicolons:
+#include<iostream>
+using namespace std;
+int main()
+{
+	for(int a=0; a<100; a++)
+	{
+		cout<<a;
+	}
+	return 0;
+}
+
+//"Why does it output 100?"
+//Ans: Because it runs the whole loop, then terminates, and the value assigned to x is hundred
+// only one output is generated in the faulty code
+//Because there are no brackets around the block of code to be iterated
+
+//-----------------------------------------------------------------------------------------
+
+
+//7: Overstepping array boundaries:
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	//adding headerfiles storing integer in array and in for loop initialzed a with 0 to less than 10
+	int array[10]={0,1,2,3,4,5,6,7,8,9};
+	//...
+	for(int a=0; a<10; a++)
+	{
+		cout<<array[a]<<endl;
+	}
+	return 0;
+}
+//"Why doesn't it output the correct values?"
+//ans:
+//Because the array had not been initialized with any values 
+//array index always start at zero so the output will be wrong
+
+
+8: Integer division
+#include<iostream>
+using namespace std;
+int main()
+{
+	//adding header files and adding decimal to integers 
+	double half = 1/2;
+	cout<<half<<endl;
+	half = 1.0/2.0;
+	cout<<half;
+	return 0;
+}
+//This code sets half to 0 not 0.5! Why? 
+//Ans:Because 1 and 2 are integer constants.
+//integer values are rounded off to whole numbers therefore 0.5 ==> 0
+
+
+//9: Variable Name Styles
+
+Take a look at the below program. Can you see anything wrong?
+
+#include <stdio.h>
+#include <string.h>
+
+main()
+{
+char CatName[20] = "fluffy";
+char dogName[20] = "fido";
+char rat_Name[20] = "fester";
+int Catage = 3;
+int dogs_age = 4;
+int ratage = 1;
+char myPet[20];
+int itsAge;
+
+strcpy(myPet,rat_Name);
+itsAge = ratage;
+printf("My pet is %s\n",myPet);
+}
+
+//Besides the obviously bizarre choice of having a pet rat, do you notice anything? 
+//Ans: it will not print out the name of the rat
+
+//10 Misusing the && and || operators:
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int value;
+	do
+	{
+	//...
+	value=10;
+	}while(!(value==10) && !(value==20));
+	return 0;
+}
+
+//"Huh? Even though value is 10 the program loops. Why?"
+//Ans :beacause with the use of the OR operator the loop checks both conditions.
