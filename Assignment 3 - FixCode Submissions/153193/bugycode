@@ -1,0 +1,42 @@
+int main()
+{
+	cout << "This program will crash"
+		<< endl;
+
+	float nSum=0;
+	int nNums;
+
+	// accumulate input numbers until the
+	// user enteres a negative number, then
+	// return the average
+	nNums = -1;
+	while (true)
+	{
+		// enter another number to add
+		int nValue;
+		cout << "Enter another number:";
+		cin >> nValue;
+		//after every input nNums should be incrimented to find the avrage
+		nNums++;
+		cout << endl;
+
+		// if the input number is negative...
+		if (nValue < 0)
+		{
+			// ... then output the average
+			cout << "Average is: "
+				<< nSum / nNums
+				<< endl;
+			break;
+		}
+
+		// not negative, add the value to
+		// the accumulator
+		nSum += nValue;
+	}
+
+	cin.ignore(10000, '\n');
+
+	system("pause");
+	return 0;
+}
