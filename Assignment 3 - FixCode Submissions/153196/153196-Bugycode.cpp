@@ -28,8 +28,9 @@ int main()
 		if(nValue < 0)
 		{
 			// ... then output the average
+			// Fix # 3 Type casing of int division to float
 			cout << "Average is: "
-				 << nSum/nNums
+				 << static_cast<float>(nSum)/nNums
 				 << endl;
 			break;
 		}
