@@ -47,17 +47,20 @@ The sum is: -1393
 // ANSWER-3: Because you cannot initialize sum variable to the value of uninitialized variables (a and b).
 // And input to a variable was missing.
 4: Using a single equal sign to check equality:
-
+#include<iostream>
+using namespace std;
+int main()
+{
 char x='Y';
-while(x='Y')
+while(x=='Y') // '==' operator is used to check equality
 {
 //...
 cout<<"Continue? (Y/N)";
 cin>>x;
 }
-
+}
 "Why doesn't my loop ever end?"
- 
+// ANSWER-4: Beacuse you have used worng operator '=' for equality in the condition statement. 
 
 5: Undeclared Functions:
 
